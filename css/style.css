@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+		margin:0px;
+		padding:0px;
+	
+		}
+		
+		.container {
+		background:url(../images/main_bg.jpg) no-repeat;
+		width:328px;
+		height:419px;
+		}
+		.header {
+			width:328px;
+			height:43px;
+			background:url(../images/header.jpg);
+			margin-bottom:27px;
+			}
+		.info {
+			float:right;
+			margin-right:18px;
+			width:150px;
+			color:#fff;
+			direction:rtl;
+		}
+		.name {
+			font-size:19px;
+			font-family:Arial, Helvetica, sans-serif;
+			}
+			.brif {
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:15px;}
+		.quran {
+			float:left;
+			margin-left:18px;
+			}
+			.choose_sora {
+				margin-top:40px;
+				margin-right:18px;
+				  clear:both;float:right;
+				}
+		
