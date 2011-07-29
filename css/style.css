@@ -3,7 +3,8 @@
 body {
 		margin:0px;
 		padding:0px;
-	
+		width:328px;
+		height:419px;	
 		}
 		
 		.container {
@@ -35,9 +36,38 @@ body {
 			float:left;
 			margin-left:18px;
 			}
-			.choose_sora {
+			.choose_sora , .kare2{
 				margin-top:40px;
 				margin-right:18px;
-				  clear:both;float:right;
+				clear:both;
+				float:right;
 				}
+				.kare2 {
+					margin-top:15px;
+					}
+		.buttons {
+			position:absolute;
+			height:68px;
+			bottom:0;
+			width:100%;
+			}
+.play , .pause , .listen{
+	width:99px;
+	height:31px;
+	background:url(../images/play.jpg);
+	border:0;
+	padding:0;
+	margin-top:19px;
+	float:right;
+	margin-right:31px;
+	cursor:pointer;
+	}
+	
+	.listen {
+		margin-right:48px;
 		
+		background:url(../images/listen.jpg);
+		}
+	.pause {
+		background:url(../images/pause.jpg);
+		}
