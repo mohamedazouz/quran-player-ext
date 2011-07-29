@@ -7,55 +7,34 @@
 
 			}
 		.info {
-			float:right;
-			margin-right:18px;
-			width:150px;
-			color:#fff;
-			direction:rtl;
-		}
-		.name {
-			font-size:19px;
-			font-family:Arial, Helvetica, sans-serif;
-			}
-			.brif {
-				font-family:Verdana, Geneva, sans-serif;
-				font-size:15px;}
-		.quran {
-			float:left;
 			margin-left:18px;
-			}
+			direction:ltr;
+		}
+		
 			.choose_sora , .kare2{
-				margin-top:40px;
-				margin-right:18px;
-				clear:both;
-				float:right;
+				
+				margin-left:18px;
+				margin-right:0;		
+				float:left;
 				}
-				.kare2 {
-					margin-top:15px;
-					}
-		.buttons {
-			position:absolute;
-			height:68px;
-			bottom:0;
-			width:100%;
-			}
+				
+	
 .play , .pause , .listen{
-	width:99px;
-	height:31px;
-	background:url(../images/play.jpg);
-	border:0;
-	padding:0;
-	margin-top:19px;
-	float:right;
-	margin-right:31px;
-	cursor:pointer;
+	float:left;
+	margin-left:31px;
 	}
 	
 	.listen {
-		margin-right:48px;
-		
-		background:url(../images/listen.jpg);
+		margin-left:48px;
+		margin-right:0;
+		background:url(../images/listen-en.jpg);
 		}
-	.pause {
-		background:url(../images/pause.jpg);
-		}	
+div.chzn-container ul.chzn-results li {
+
+  /*** arabic ***/ 
+  direction: ltr;}
+  div.chzn-container a.chzn-single span {
+
+  
+  /*** arabic **/
+  direction: ltr;}

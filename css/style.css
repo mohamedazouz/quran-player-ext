@@ -5,6 +5,7 @@ body {
 		padding:0px;
 		width:328px;
 		height:419px;	
+	
 		}
 		
 		.container {
@@ -20,10 +21,11 @@ body {
 			}
 		.info {
 			float:right;
-			margin-right:18px;			
-			color:#fff;
+			margin-right:18px;
+			
 			direction:rtl;
 			font-family:Arial, Helvetica, sans-serif;
+				color:#fff;
 		}
 		.name {
 			font-size:19px;	
@@ -71,6 +73,6 @@ body {
 		
 		background:url(../images/listen.jpg);
 		}
-	.pause {
+	.pause, .play:hover {
 		background:url(../images/pause.jpg);
 		}					
