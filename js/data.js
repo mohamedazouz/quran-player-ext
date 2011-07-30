@@ -7,7 +7,7 @@ quranChapter=[
     {
         id:2,
         name:"سورة البقرة",
-        summery:""
+        summery:"showSoraDetails"
     }
     ]
 quranQare2=[

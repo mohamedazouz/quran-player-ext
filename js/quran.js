@@ -1,4 +1,4 @@
-var backgrounPage=chrome.extension.getBackgroundPage();
+﻿var backgrounPage=chrome.extension.getBackgroundPage();
 popupPlayer={
     setupView:function(){
         if( backgrounPage.startlink==0){
@@ -34,7 +34,8 @@ popupPlayer={
         console.log(name);
     },
     showSora:function(){
-        var out="<select id='link' title='اختار السورة' class='chzn-select' style='width:290px;' tabindex='1'>"
+
+        var out="<select id='link' title='اختار السورة' class='chzn-select' style='width:290px;' tabindex='1'  onchange='popupPlayer.showSoraDetails()'>"
         size=quranChapter.length;
         out+="<option value='0'>اختار السورة</option>";
         for(i=0;i<size;i++){
@@ -69,11 +70,21 @@ popupPlayer={
         }
         out+="</select>"
         $("#choose_kare2").html(out);
+    },
+    showSoraDetails:function(){
+        var sora=$("#link").val();
+        var out="";
+        if(sora!=0){
+            out+="<strong>"+quranChapter[sora-1].name+"</strong><br>";
+            out+=quranChapter[sora-1].summery;
+        }
+        $("#soraDetails").html(out)
     }
 }
 $(function(){
     popupPlayer.setupView();
     popupPlayer.showSora();
-    popupPlayer.showQare2();	
-	$(".chzn-select").chosen();
+    popupPlayer.showQare2();
+    popupPlayer.showSoraDetails();
+    $(".chzn-select").chosen();
 })
