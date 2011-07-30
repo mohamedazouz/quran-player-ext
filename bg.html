@@ -11,9 +11,10 @@ and open the template in the editor.
         <script>
             startlink=0;
             played=-1;
-            function play(soraNumber){
-
-                var site='http://server5.mp3quran.net/afs/'
+            qare2=""
+            function play(soraNumber,qar2obj){
+                var site=qar2obj.link;
+                qare2=qar2obj.id
                 link=''
                 if(soraNumber < 10){
                     link+="00"
@@ -36,22 +37,15 @@ and open the template in the editor.
                 document.getElementById("audio").pause()
             }
             function playpause(){
+                document.getElementById("audio").play();
                 played=1;
-                document.getElementById("audio").play()
             }
             $(document).ready(function(){
                 document.getElementById("audio").addEventListener('ended',function(){
                     startlink++;
                     play(startlink)
                 },false)
-                function onRequest(request, sender, callback) {
-                //    alert("background" + JSON.stringify(request));
-                }
-                chrome.extension.onRequest.addListener(onRequest);
             })
-            function notify(){
-                chrome.extension.sendRequest({"eshat":"fola"});
-            }
         </script>
     </head>
     <body>
