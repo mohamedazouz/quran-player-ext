@@ -74,5 +74,6 @@ popupPlayer={
 $(function(){
     popupPlayer.setupView();
     popupPlayer.showSora();
-    popupPlayer.showQare2();
+    popupPlayer.showQare2();	
+	$(".chzn-select").chosen();
 })
