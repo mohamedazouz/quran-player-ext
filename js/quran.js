@@ -47,7 +47,7 @@ popupPlayer={
                 out+="<option value='"+quranChapter[i].id+"' >";
             }
             soraName=quranChapter[i].name
-            out+=i + ' - '+soraName;
+            out+=i + 1 + ' - '+soraName;
             out+="</option>"
         }
         out+="</select>"
@@ -65,7 +65,7 @@ popupPlayer={
                 out+="<option value='"+quranQare2[i].id+"' >";
             }
             soraName=quranQare2[i].name
-            out+=i + ' - '+soraName;
+            out+=i + 1 + ' - '+soraName;
             out+="</option>"
         }
         out+="</select>"
