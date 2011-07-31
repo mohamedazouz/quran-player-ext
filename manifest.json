@@ -6,7 +6,7 @@
     "icons":{"48": "quran.jpg",
         "128": "quran.jpg"},
     "browser_action": {
-        "default_icon": "nafos.gif",
+        "default_icon": "noblequran.jpg",
          "default_title":"مشغل القرأن الكريم",
         "popup": "popup.html"
   },
