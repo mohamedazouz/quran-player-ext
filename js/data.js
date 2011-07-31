@@ -646,7 +646,7 @@ quranQare2=[
     },
 	{
         id:"15",
-        link:"http://server5.mp3quran.net/minsh/",
+        link:"http://server10.mp3quran.net/minsh/",
         name:"محمد صديق المنشاوي"
     },
 	{

@@ -1,4 +1,4 @@
-﻿var backgrounPage=chrome.extension.getBackgroundPage();
+var backgrounPage=chrome.extension.getBackgroundPage();
 popupPlayer={
     setupView:function(){
         if( backgrounPage.startlink==0){
@@ -15,7 +15,8 @@ popupPlayer={
         var sora=$("#link").val();
         var qare2=$("#qare2").val();
         if(sora!=0 && qare2!=0){
-            $("#player").show();
+            $("#player").hide();
+            $('#waiting').show();
             popupPlayer.setclass("pause");
             backgrounPage.play(sora,quranQare2[qare2-1]);
         }
@@ -76,10 +77,18 @@ popupPlayer={
         if(sora!=0){
             out+="<strong>"+quranChapter[sora-1].name+"</strong><br>";
             out+=quranChapter[sora-1].summery;
+            $("#soraDetails_display").hide();
+            $(".quran").show();
+            $("#soraDetails").html(out)
+        }else
+        {
+            $("#soraDetails_display").show();
+            $(".quran").hide();
         }
-		$("#soraDetails_display").hide();
-		$(".quran").show();
-        $("#soraDetails").html(out)
+    },
+    showwait:function(){
+        $("#waiting").hide();
+        $("#player").show();
     }
 }
 $(function(){
@@ -87,7 +96,6 @@ $(function(){
     popupPlayer.showSora();
     popupPlayer.showQare2();
     popupPlayer.showSoraDetails();
-	$("#soraDetails_display").show();
-	$(".quran").hide();
     $(".chzn-select").chosen();
+    $("#waiting").hide();
 })

@@ -1,13 +1,13 @@
 {
     "name":"مشغل القرأن الكريم",
     "version": "1.0",
-    "description": "لسماع القرأن الكريم اثناء التصفح بصوت فضيلة الشيح مشارى راشد",
+    "description": "لسماع القرأن الكريم اثناء التصفح",
     "background_page": "bg.html",
     "icons":{"48": "quran.jpg",
         "128": "quran.jpg"},
     "browser_action": {
         "default_icon": "nafos.gif",
-         "default_title": "القرأن الكريم بصوت فضيلة الشيح مشارى راشد",
+         "default_title":"مشغل القرأن الكريم",
         "popup": "popup.html"
   },
     "permissions": [
