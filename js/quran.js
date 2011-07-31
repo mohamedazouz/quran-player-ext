@@ -33,8 +33,7 @@ popupPlayer={
         document.getElementById("player").className=name
         console.log(name);
     },
-    showSora:function(){
-
+    showSora:function(){		
         var out="<select id='link' title='اختار السورة' class='chzn-select' style='width:290px;' tabindex='1'  onchange='popupPlayer.showSoraDetails()'>"
         size=quranChapter.length;
         out+="<option value='0'>اختار السورة</option>";
@@ -71,13 +70,15 @@ popupPlayer={
         out+="</select>"
         $("#choose_kare2").html(out);
     },
-    showSoraDetails:function(){
+    showSoraDetails:function(){		
         var sora=$("#link").val();
         var out="";
         if(sora!=0){
             out+="<strong>"+quranChapter[sora-1].name+"</strong><br>";
             out+=quranChapter[sora-1].summery;
         }
+		$("#soraDetails_display").hide();
+		$(".quran").show();
         $("#soraDetails").html(out)
     }
 }
@@ -86,5 +87,7 @@ $(function(){
     popupPlayer.showSora();
     popupPlayer.showQare2();
     popupPlayer.showSoraDetails();
+	$("#soraDetails_display").show();
+	$(".quran").hide();
     $(".chzn-select").chosen();
 })
