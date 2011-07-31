@@ -241,12 +241,16 @@ div.chzn-container ul.chzn-choices li.search-choice.search-choice-focus a.search
 /* Results */
 div.chzn-container ul.chzn-results {
   margin: 0 4px 4px 0;
-  max-height: 80px;
+  max-height: 225px;
   padding: 0 0 0 4px;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+#choose_kare2 div.chzn-container ul.chzn-results {
+	max-height:183px;
+	}
 div.chzn-container-multi ul.chzn-results {
   margin: -1px 0 0;
   padding: 0;
