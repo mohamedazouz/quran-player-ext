@@ -79,4 +79,8 @@ margin-left: 18px;
 		}
 	.pause{
 		background:url(../images/pause.jpg);
-		}					
+		}			
+		#waiting{
+			position: absolute;
+left: 85px;
+top: 19px;}		
