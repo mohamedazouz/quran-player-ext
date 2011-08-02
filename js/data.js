@@ -625,6 +625,11 @@ quranQare2=[
         name:"عبدالرحمن السديس"
     },
 	{
+        id:"11",
+        link:"http://server5.mp3quran.net/kyat/",
+        name:" عبدالله خياط "
+    },
+	{
         id:"12",
         link:"http://server9.mp3quran.net/hthfi/",
         name:"علي بن عبدالرحمن الحذيفي"
@@ -633,11 +638,6 @@ quranQare2=[
         id:"13",
         link:"http://server5.mp3quran.net/maher/",
         name:"ماهر المعيقلي"
-    },
-	{
-        id:"11",
-        link:"http://server5.mp3quran.net/kyat/",
-        name:" عبدالله خياط "
     },
 	{
         id:"14",
