@@ -8,6 +8,7 @@ and open the template in the editor.
         <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="../controllers/dbconnector.js"></script>
         <script src="js/data.js" type="text/javascript"></script>
         <script>
             startlink=0;
@@ -53,6 +54,7 @@ and open the template in the editor.
                 }
             }
             $(document).ready(function(){
+                PlayerDB.setup();
                 document.getElementById("audio").addEventListener('ended',function(){
                     startlink++;
                     play(startlink,quranQare2[qare2-1])

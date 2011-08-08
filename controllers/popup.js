@@ -18,7 +18,7 @@ popupPlayer={
             $("#player").hide();
             $('#waiting').show();
             popupPlayer.setclass("pause");
-            backgrounPage.play(sora,quranQare2[qare2-1]);
+            backgrounPage.play(sora,backgrounPage.quranQare2[qare2-1]);
         }
     },
     control:function(){
@@ -36,17 +36,17 @@ popupPlayer={
     },
     showSora:function(){		
         var out="<select id='link' title='اختار السورة' class='chzn-select' style='width:290px;' tabindex='1'  onchange='popupPlayer.showSoraDetails()'>"
-        size=quranChapter.length;
+        size=backgrounPage.quranChapter.length;
         out+="<option value='0'>اختار السورة</option>";
         for(i=0;i<size;i++){
-            if(backgrounPage.startlink==quranChapter[i].id)
+            if(backgrounPage.startlink==backgrounPage.quranChapter[i].id)
             {
-                out+="<option value='"+quranChapter[i].id+"' selected>";
+                out+="<option value='"+backgrounPage.quranChapter[i].id+"' selected>";
             }else
             {
-                out+="<option value='"+quranChapter[i].id+"' >";
+                out+="<option value='"+backgrounPage.quranChapter[i].id+"' >";
             }
-            soraName=quranChapter[i].name
+            soraName=backgrounPage.quranChapter[i].name
             out+=i + 1 + ' - '+soraName;
             out+="</option>"
         }
@@ -56,15 +56,15 @@ popupPlayer={
     showQare2:function(){
         var out="<select title='أختار القارئ ' class='chzn-select' style='width:290px;' tabindex='2' id='qare2'>"
         out+="<option value='0'>أختار القارئ</option>";
-        for(i=0;i<quranQare2.length;i++){
-            if(backgrounPage.qare2==quranQare2[i].id)
+        for(i=0;i<backgrounPage.quranQare2.length;i++){
+            if(backgrounPage.qare2==backgrounPage.quranQare2[i].id)
             {
-                out+="<option value='"+quranQare2[i].id+"' selected>";
+                out+="<option value='"+backgrounPage.quranQare2[i].id+"' selected>";
             }else
             {
-                out+="<option value='"+quranQare2[i].id+"' >";
+                out+="<option value='"+backgrounPage.quranQare2[i].id+"' >";
             }
-            soraName=quranQare2[i].name
+            soraName=backgrounPage.quranQare2[i].name
             out+=i + 1 + ' - '+soraName;
             out+="</option>"
         }
@@ -75,8 +75,8 @@ popupPlayer={
         var sora=$("#link").val();
         var out="";
         if(sora!=0){
-            out+="<strong>"+quranChapter[sora-1].name+"</strong><br>";
-            out+=quranChapter[sora-1].summery;
+            out+="<strong>"+backgrounPage.quranChapter[sora-1].name+"</strong><br>";
+            out+=backgrounPage.quranChapter[sora-1].summery;
             $("#soraDetails_display").hide();
             $(".quran").show();
             $("#soraDetails").html(out)
