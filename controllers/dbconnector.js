@@ -25,7 +25,7 @@ PlayerDB={
                 tx.executeSql("SELECT * FROM playlist", [],
                     function(tx, result) {
                         callback(result.rows);
-                    }, null);
+                    }, PlayerDB.onError);
             }
             );
     },
@@ -35,7 +35,7 @@ PlayerDB={
                 tx.executeSql("delete FROM playlist where id = " + id, [],
                     function(tx, result) {
                         callback(result.rows);
-                    }, null);
+                    }, PlayerDB.onError);
             }
             );
     },
@@ -45,7 +45,17 @@ PlayerDB={
                 tx.executeSql("delete  FROM playlist", [],
                     function(tx, result) {
                         callback(result.rows);
-                    }, null);
+                    }, PlayerDB.onError);
+            }
+            );
+    },
+    selectPlayListByID:function(id,callback){
+        PlayerDB.db.transaction(
+            function(tx) {
+                tx.executeSql("SELECT * FROM playlist where id = " + id, [],
+                    function(tx, result) {
+                        callback(result.rows);
+                    }, PlayerDB.onError);
             }
             );
     },

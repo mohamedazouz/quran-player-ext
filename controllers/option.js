@@ -21,7 +21,6 @@ PlayerOptoin={
         $("#moqra2").html(out);
     },
     showplaylist:function(){
-        
         backgrounPage.PlayerDB.selectALLPlayList(function(response){
             var out="";
             size=response.length
@@ -41,16 +40,27 @@ PlayerOptoin={
                 moqra2=response.item(i).moqra2;
                 out+="<td>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
                 out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>delete</button></td>";
-                out+="<td><button onclick=''>play</button></td>";
+                out+="<td><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
                 out+="</tr>"
             }
             $("#preplayList").html(out);
         });   
     },
     deletePlayList:function(id){
-        backgrounPage.PlayerDB.deletePlayListByID(id,function(response){
-            console.log(response);
+        backgrounPage.PlayerDB.deletePlayListByID(id,function(){
             PlayerOptoin.showplaylist();
+        })
+    },
+    playPlayList:function(id){
+        backgrounPage.PlayerDB.selectPlayListByID(id,function(response){
+            console.log("hererer")
+            playlist=response.item(0);
+            playlist.seek=0;
+            localStorage.playlist=JSON.stringify(playlist);
+            var sora=JSON.parse(playlist.list)[0];
+            var qare2=playlist.moqra2;
+            backgrounPage.PlayerBG.playlistflg=1;
+            backgrounPage.PlayerBG.play(sora,backgrounPage.quranQare2[qare2-1]);
         })
     }
 }
