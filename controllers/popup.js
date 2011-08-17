@@ -37,9 +37,9 @@ popupPlayer={
         console.log(name);
     },
     showSora:function(){		
-        var out="<select id='link' title='اختار السورة' class='chzn-select' style='width:290px;' tabindex='1'  onchange='popupPlayer.showSoraDetails()'>"
+        var out="<select id='link' data-placeholder='اختار السورة' class='chzn-select' style='width:290px;' tabindex='1'  onchange='popupPlayer.showSoraDetails()'>"
         size=backgrounPage.quranChapter.length;
-        out+="<option value='0'>اختار السورة</option>";
+        out+="<option value=''></option>";
         for(i=0;i<size;i++){
             if(backgrounPage.PlayerBG.soranumber==backgrounPage.quranChapter[i].id)
             {

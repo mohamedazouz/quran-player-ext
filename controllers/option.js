@@ -1,8 +1,9 @@
 var backgrounPage=chrome.extension.getBackgroundPage();
 PlayerOptoin={
     showOptions:function(){
-        var out="<select multiple='multiple' id='soraName' >"
+        var out="<select id='soraName' data-placeholder='اختار السورة' class='chzn-select' multiple style='width:350px;' tabindex='1' >"
         size=backgrounPage.quranChapter.length;
+		out+="<option value=''></option>";
         for(i=0;i<size;i++){
             out+="<option value='"+backgrounPage.quranChapter[i].id+"' >"
             out+=backgrounPage.quranChapter[i].name;
@@ -10,7 +11,7 @@ PlayerOptoin={
         }
         out+="</select>"
         $("#sora").html(out);
-        out="<select  id='moqra2Name' >"
+        out="<select  id='moqra2Name' data-placeholder='اختار القارىء' class='chzn-select'  style='width:350px;' tabindex='2' >"
         size=backgrounPage.quranQare2.length;
         for(i=0;i<size;i++){
             out+="<option value='"+backgrounPage.quranQare2[i].id+"' >"
@@ -79,11 +80,12 @@ $(function(){
             setTimeout("$('#error').hide();",2*1000);
         }
         PlayerOptoin.showplaylist();
+		
     })
     $("#deleteAllPlaylist").click(function(){
         backgrounPage.PlayerDB.deleteALLPlayList(function(){
             PlayerOptoin.showplaylist();
         })
     })
-
+$(".chzn-select").chosen();
 })
