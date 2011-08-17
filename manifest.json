@@ -1,13 +1,13 @@
 {
-    "name":"مشغل القرأن الكريم",
-    "version": "1.0",
-    "description": "لسماع القرأن الكريم اثناء التصفح",
+    "name":"مشغل القرآن الكريم",
+    "version": "2.0",
+    "description": "لسماع القرأن الكريم القرآن التصفح",
     "background_page": "views/bg.html",
     "icons":{"48": "views/images/quran.jpg",
         "128": "views/images/quran.jpg"},
     "browser_action": {
         "default_icon": "views/images/noblequran.jpg",
-         "default_title":"مشغل القرأن الكريم",
+         "default_title":"مشغل القرآن الكريم",
         "popup": "views/popup.html"
   },
     "permissions": [
