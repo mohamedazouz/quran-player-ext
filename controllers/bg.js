@@ -56,10 +56,18 @@ $(function(){
             playlist=JSON.parse(localStorage.playlist);
             list=JSON.parse(playlist.list);
             playlist.seek++;
-            console.log(playlist.seek + JSON.parse(playlist.list)[1] )
+            if(playlist.seek==list.length){
+                if(playlist.repeat){
+                    playlist.seek=0;
+                }else
+                {
+                    return;
+                }
+            }
             soraNumber=list[playlist.seek];
             console.log(list[playlist.seek])
             moqra2Obj=quranQare2[playlist.moqra2-1];
+            localStorage.playlist=JSON.stringify(playlist);
         }else{
             soraNumber=++PlayerBG.startlink;
             moqra2Obj=quranQare2[PlayerBG.qare2-1];

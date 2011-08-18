@@ -41,7 +41,7 @@ PlayerOptoin={
                 moqra2=response.item(i).moqra2;
                 out+="<td>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
                 out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>delete</button></td>";
-                out+="<td><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
+                out+="<td>اعادة تشغيل <input type='checkbox' id='repeat-"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
                 out+="</tr>"
             }
             $("#preplayList").html(out);
@@ -57,6 +57,9 @@ PlayerOptoin={
             console.log("hererer")
             playlist=response.item(0);
             playlist.seek=0;
+            if($("#repeat-"+id).attr('checked')){
+                playlist.repeat=1;
+            }
             localStorage.playlist=JSON.stringify(playlist);
             var sora=JSON.parse(playlist.list)[0];
             var qare2=playlist.moqra2;
