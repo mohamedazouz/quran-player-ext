@@ -1,7 +1,7 @@
 var backgrounPage=chrome.extension.getBackgroundPage();
 PlayerOptoin={
     showOptions:function(){
-        var out="<select id='soraName' data-placeholder='اختار السورة' class='chzn-select' multiple style='width:350px;' tabindex='1' >"
+        var out="<select id='soraName' data-placeholder='اختار السورة' class='chzn-select' multiple style='width:235px;' tabindex='1' >"
         size=backgrounPage.quranChapter.length;
         out+="<option value=''></option>";
         for(i=0;i<size;i++){
@@ -11,7 +11,7 @@ PlayerOptoin={
         }
         out+="</select>"
         $("#sora").html(out);
-        out="<select  id='moqra2Name' data-placeholder='اختار القارىء' class='chzn-select'  style='width:350px;' tabindex='2' >"
+        out="<select  id='moqra2Name' data-placeholder='اختار القارىء' class='chzn-select'  style='width:235px;' tabindex='2' >"
         size=backgrounPage.quranQare2.length;
         for(i=0;i<size;i++){
             out+="<option value='"+backgrounPage.quranQare2[i].id+"' >"
@@ -28,7 +28,7 @@ PlayerOptoin={
             for(i=0;i<size;i++){
                 out+="<tr>";
                 out+="<td>"+response.item(i).id+"</td>";
-                out+="<td>"+response.item(i).name+"</td>";
+                out+="<td width='250'>"+response.item(i).name+"</td>";
                 list=JSON.parse(response.item(i).list);
                 html="";
                 for(j=0;j<list.length;j++){
@@ -37,9 +37,9 @@ PlayerOptoin={
                         html+=",";
                     }
                 }
-                out+="<td>"+html+"</td>";
+                out+="<td  width='250'>"+html+"</td>";
                 moqra2=response.item(i).moqra2;
-                out+="<td>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
+                out+="<td  width='250'>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
                 out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>delete</button></td>";
                 out+="<td>اعادة تشغيل <input type='checkbox' id='repeat-"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
                 out+="</tr>"

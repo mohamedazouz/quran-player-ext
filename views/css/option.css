@@ -1,13 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
-
+body {
+background:#4d4d4d;
+padding:0;
+margin:0;
+font-family:Tahoma, Geneva, sans-serif;
+font-size:12px;
+}
 table {
-    width:90%;
+    width:100%;
     border-top:1px solid #393939;
     border-right:1px solid #393939;
     margin:1em auto;
     border-collapse:collapse;
-    font:76%/160%;
+   font-size:12px;
+   font-family:Tahoma, Geneva, sans-serif;
     direction: rtl;
 }
 caption {
@@ -31,7 +38,7 @@ td {
     color:#000;
     border-bottom: 1px solid #393939;
     border-left:1px solid #3e3e3e;
-    padding:.3em 1em;
+    background: white;
     text-align:center;
 }
 th {
@@ -43,7 +50,7 @@ th {
     padding:.3em 1em;
 }
 thead th {
-    background:#4d4d4d;
+    background:#1f1f1f;
     text-align:center;
     font:bold 1.2em/2em;
     color:#fff
@@ -64,17 +71,20 @@ tfoot th em {
     font-style: normal;
 }
 .container {
-    padding: 0 5%;
+   width:938px;
+   padding:20px;
+   background:url(../images/option_back.jpg);
+   margin:70px auto 0 ;
+   border-radius:10px;
+   border:3px solid #1f1f1f;
 }
 input.playlist{
     float: right;
-    clear: both;
-    margin-top: 16px;
-    width: 348px;
-    padding: 5px;
+    width: 235px;
+    padding: 4px;
     text-align: right;
     direction: rtl;}
-#sora{
+#sora , #moqra2{
     float: right;
     margin-left: 19px;}
 /***************/
@@ -93,6 +103,8 @@ input.playlist{
     direction: rtl;
 }
 
+.chzn-container-multi .chzn-choices .search-field input { 
+padding:4px;}
 /**********/
 
 .play, .pause, .listen {
