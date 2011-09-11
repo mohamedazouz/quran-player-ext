@@ -3,7 +3,7 @@ PlayerOptoin={
     showOptions:function(){
         var out="<select id='soraName' data-placeholder='اختار السورة' class='chzn-select' multiple style='width:350px;' tabindex='1' >"
         size=backgrounPage.quranChapter.length;
-		out+="<option value=''></option>";
+        out+="<option value=''></option>";
         for(i=0;i<size;i++){
             out+="<option value='"+backgrounPage.quranChapter[i].id+"' >"
             out+=backgrounPage.quranChapter[i].name;
@@ -48,9 +48,11 @@ PlayerOptoin={
         });   
     },
     deletePlayList:function(id){
-        backgrounPage.PlayerDB.deletePlayListByID(id,function(){
-            PlayerOptoin.showplaylist();
-        })
+        if(confirm("ها تريد مسح القائمة رقم "+ id + "؟")){
+            backgrounPage.PlayerDB.deletePlayListByID(id,function(){
+                PlayerOptoin.showplaylist();
+            })
+        }
     },
     playPlayList:function(id){
         backgrounPage.PlayerDB.selectPlayListByID(id,function(response){
@@ -66,6 +68,10 @@ PlayerOptoin={
             backgrounPage.PlayerBG.playlistflg=1;
             backgrounPage.PlayerBG.play(sora,backgrounPage.quranQare2[qare2-1]);
         })
+    },
+    setclass:function(name){
+        document.getElementById("pauseButton").className=name
+        console.log(name);
     }
 }
 $(function(){
@@ -90,5 +96,25 @@ $(function(){
             PlayerOptoin.showplaylist();
         })
     })
-$(".chzn-select").chosen();
+    switch (backgrounPage.PlayerBG.played) {
+        case 0:
+            PlayerOptoin.setclass("play");
+            break;
+        case 1:
+            PlayerOptoin.setclass("pause");
+            break;
+        default:
+            $("#pauseButton").hide()
+            break;
+    }
+    $("#pauseButton").click(function(){
+        if( backgrounPage.PlayerBG.played==0){
+            backgrounPage.PlayerBG.playpause();
+            PlayerOptoin.setclass("pause");
+        }else{
+            backgrounPage.PlayerBG.pause();
+            PlayerOptoin.setclass("play");
+        }
+    })
+    $(".chzn-select").chosen();
 })

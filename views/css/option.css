@@ -2,94 +2,110 @@
 /* CSS Document */
 
 table {
-	width:90%;
-	border-top:1px solid #393939;
-	border-right:1px solid #393939;
-	margin:1em auto;
-	border-collapse:collapse;
-	font:76%/160%;
-	direction: rtl;
+    width:90%;
+    border-top:1px solid #393939;
+    border-right:1px solid #393939;
+    margin:1em auto;
+    border-collapse:collapse;
+    font:76%/160%;
+    direction: rtl;
 }
 caption {
-	color: #9ba9b4;
-	font-size:.94em;
-	letter-spacing:.1em;
-	padding:0;
-	margin:1em 0 0 0;
-	margin-bottom:0;
-	caption-side:top;
-	text-align:center;
+    color: #9ba9b4;
+    font-size:.94em;
+    letter-spacing:.1em;
+    padding:0;
+    margin:1em 0 0 0;
+    margin-bottom:0;
+    caption-side:top;
+    text-align:center;
 }
 tr.odd td, tr.odd .column1 {
-	background:#D8D8D8 url(images/background.gif) no-repeat;
-	color: black;
+    background:#D8D8D8 url(images/background.gif) no-repeat;
+    color: black;
 }
 .column1 {
-	background:#f9fcfe;
+    background:#f9fcfe;
 }
 td {
-	color:#000;
-	border-bottom: 1px solid #393939;
-	border-left:1px solid #3e3e3e;
-	padding:.3em 1em;
-	text-align:center;
+    color:#000;
+    border-bottom: 1px solid #393939;
+    border-left:1px solid #3e3e3e;
+    padding:.3em 1em;
+    text-align:center;
 }
 th {
-	font-weight:normal;
-	color: #678197;
-	text-align:left;
-	border-bottom: 1px solid #393939;
-	border-left:1px solid #3e3e3e;
-	padding:.3em 1em;
+    font-weight:normal;
+    color: #678197;
+    text-align:left;
+    border-bottom: 1px solid #393939;
+    border-left:1px solid #3e3e3e;
+    padding:.3em 1em;
 }
 thead th {
-	background:#4d4d4d;
-	text-align:center;
-	font:bold 1.2em/2em;
-	color:#fff
+    background:#4d4d4d;
+    text-align:center;
+    font:bold 1.2em/2em;
+    color:#fff
 }
 tfoot th {
-	background:#4d4d4d;
-	text-align:center;
+    background:#4d4d4d;
+    text-align:center;
 }
 tfoot th strong {
-	font:bold 1.2em "Century Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif;
-	margin:.5em .5em .5em 0;
-	color:#66a3d3;
+    font:bold 1.2em "Century Gothic", "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin:.5em .5em .5em 0;
+    color:#66a3d3;
 }
 tfoot th em {
-	color:#f03b58;
-	font-weight: bold;
-	font-size: 1.1em;
-	font-style: normal;
+    color:#f03b58;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-style: normal;
 }
 .container {
-	padding: 0 5%;
+    padding: 0 5%;
 }
 input.playlist{
-float: right;
-clear: both;
-margin-top: 16px;
-width: 348px;
-padding: 5px; 
-text-align: right;
-direction: rtl;}
+    float: right;
+    clear: both;
+    margin-top: 16px;
+    width: 348px;
+    padding: 5px;
+    text-align: right;
+    direction: rtl;}
 #sora{
-	float: right;
-margin-left: 19px;}
+    float: right;
+    margin-left: 19px;}
 /***************/
-		.chzn-container, .chzn-container-multi .chzn-choices li {
-	float:right;
+.chzn-container, .chzn-container-multi .chzn-choices li {
+    float:right;
 }
 .chzn-container-multi .chzn-choices .search-choice {
-	margin: 3px 5px 3px 0px;
+    margin: 3px 5px 3px 0px;
 }
 .chzn-container .chzn-results li, .chzn-container-multi .chzn-choices .search-field .default {
-	text-align: right;
-	direction: rtl;
+    text-align: right;
+    direction: rtl;
 }
 .chzn-container .chzn-results li , .chzn-container-single .chzn-single span , .chzn-container-single .chzn-search input {
-	text-align: right;
-direction: rtl;
-	}
-	/**********/
+    text-align: right;
+    direction: rtl;
+}
+
+/**********/
+
+.play, .pause, .listen {
+    width:99px;
+    height:31px;
+    background:url(../images/play.jpg);
+    border:0;
+    padding:0;
+}
+.listen {
+    margin-right:48px;
+    background:url(../images/listen.jpg);
+}
+.pause {
+    background:url(../images/pause.jpg);
+}
