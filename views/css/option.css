@@ -121,3 +121,21 @@ padding:4px;}
 .pause {
     background:url(../images/pause.jpg);
 }
+.clearfix{
+	clear:both;
+	float:none;
+}
+button {
+color: white;
+height: 25px;
+border: 1px solid black;
+box-shadow: 1px 1px 4px #333 inset;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666), color-stop(100%,#505050));
+padding: 5px 15px;
+float:left;
+padding-bottom: 20px;
+}
+.delete{
+float: left;
+margin: 10px 0;
+}

@@ -19,9 +19,10 @@ and open the template in the editor.
             <input type="text" id="playlistName" class="playlist"  placeholder="أسم قائمة التشغيل"/>
         
         <center><button  id="pauseButton" >  </button></center>
-        <button id="deleteAllPlaylist">Delete all</button>
-        <button id="deleteSelectedPlaylist">Delete Selected</button><br>
-        <button id="save">save</button>
+        <div class="delete"><button id="deleteAllPlaylist">حذف الكل</button>
+        <button id="deleteSelectedPlaylist">حذف</button>
+        
+		</div>
         <div id="">
             <table>
                 <thead>
@@ -41,7 +42,7 @@ and open the template in the editor.
                         <th >
                             حذف
                         </th>
-                        <th >
+                        <th width="200">
                             تشغيل
                         </th>
                     </tr>
@@ -49,6 +50,7 @@ and open the template in the editor.
                 <tbody id="preplayList">
                 </tbody>
             </table>
+			<button id="save">حفظ</button>
         </div>
         
 
@@ -61,6 +63,7 @@ and open the template in the editor.
                 $("tr:odd").addClass('odd');
             });
         </script>
+		<div class="clearfix"></div>
         </div>
     </body>
 </html>
