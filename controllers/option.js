@@ -41,7 +41,7 @@ PlayerOptoin={
                 moqra2=response.item(i).moqra2;
                 out+="<td  width='250'>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
                 out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>delete</button></td>";
-                out+="<td>اعادة تشغيل <input type='checkbox' id='repeat-"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
+                out+="<td>اعادة تشغيل <input type='checkbox' sid='"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
                 out+="</tr>"
             }
             $("#preplayList").html(out);
@@ -51,6 +51,15 @@ PlayerOptoin={
         if(confirm("ها تريد مسح القائمة رقم "+ id + "؟")){
             backgrounPage.PlayerDB.deletePlayListByID(id,function(){
                 PlayerOptoin.showplaylist();
+            })
+        }
+    },
+    deleteSelectedPlayList:function(){
+        if(confirm("هل تريد مسح "+ $("input:checked").length + "القوائم المختارة؟")){
+            $("input:checked").each(function(){
+                backgrounPage.PlayerDB.deletePlayListByID($(this).attr("sid"),function(){
+                    PlayerOptoin.showplaylist();
+                })
             })
         }
     },
@@ -95,6 +104,11 @@ $(function(){
         backgrounPage.PlayerDB.deleteALLPlayList(function(){
             PlayerOptoin.showplaylist();
         })
+    })
+    $("#deleteSelectedPlaylist").click(function(){
+        
+        PlayerOptoin.deleteSelectedPlayList();
+        
     })
     switch (backgrounPage.PlayerBG.played) {
         case 0:

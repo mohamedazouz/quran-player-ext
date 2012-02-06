@@ -636,7 +636,7 @@ quranQare2=[
     },
 	{
         id:"13",
-        link:"http://server5.mp3quran.net/maher/",
+        link:"http://server9.mp3quran.net/maher/",
         name:"ماهر المعيقلي"
     },
 	{
