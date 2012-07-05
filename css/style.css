@@ -36,3 +36,33 @@ p{
     float:none;
     clear:both;
 }
+span.choose_sora{
+	text-align:right;
+}
+.listen {
+position: relative;
+overflow: visible;
+display: inline-block;
+padding: 0.5em 1em;
+border: 1px solid #D4D4D4;
+margin: 0;
+text-decoration: none;
+text-shadow: 1px 1px 0 white;
+font: 11px/normal sans-serif;
+color: #333;
+white-space: nowrap;
+cursor: pointer;
+outline: none;
+background-color: #ECECEC;
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F4F4F4), to(#ECECEC));
+background-image: -moz-linear-gradient(#F4F4F4, #ECECEC);
+background-image: -o-linear-gradient(#F4F4F4, #ECECEC);
+background-image: linear-gradient(#F4F4F4, #ECECEC);
+-webkit-background-clip: padding;
+-moz-background-clip: padding;
+-o-background-clip: padding-box;
+-webkit-border-radius: 0.2em;
+-moz-border-radius: 0.2em;
+border-radius: 0.2em;
+zoom: 1;
+}
