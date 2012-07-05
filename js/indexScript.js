@@ -92,3 +92,6 @@ var IndexScript=function(){
     return indexScript;
 }
 var indexScript=new IndexScript();
+function nextSora(){
+    indexScript.nextSora();
+}
