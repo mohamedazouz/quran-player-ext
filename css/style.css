@@ -18,8 +18,7 @@ body{
     direction:rtl;
     height:79px;
     line-height:75px;
-    font:bold 14px/79px Arial, Helvetica, sans-serif;
-
+    font:bold 14px/42px Arial, Helvetica, sans-serif;
 }
 .footer a{color:#999;}
 .footer a:hover{color:#FFF;}
