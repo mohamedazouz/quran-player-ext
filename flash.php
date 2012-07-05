@@ -1,7 +1,7 @@
 <?php
 $mp3_url=$_GET['mp3_url'];
 ?>
-<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  id="Andomy" align="middle">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  id="Andomy" align="middle" width="510" height="60">
     <param name="movie" value="player.swf?file=<?=$mp3_url?>" />
     <param name="quality" value="high" />
     <param name="bgcolor" value="#ffffff" />
@@ -14,7 +14,7 @@ $mp3_url=$_GET['mp3_url'];
     <param name="salign" value="" />
     <param name="allowScriptAccess" value="sameDomain" />
     <!--[if !IE]>-->
-    <object type="application/x-shockwave-flash" data="player.swf?file=<?=$mp3_url?>">
+    <object type="application/x-shockwave-flash" data="player.swf?file=<?=$mp3_url?>" width="510" height="60">
         <param name="movie" value="player.swf?file=<?=$mp3_url?>" />
         <param name="quality" value="high" />
         <param name="bgcolor" value="#ffffff" />

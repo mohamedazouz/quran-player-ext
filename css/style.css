@@ -48,7 +48,7 @@ border: 1px solid #D4D4D4;
 margin: 0;
 text-decoration: none;
 text-shadow: 1px 1px 0 white;
-font: 11px/normal sans-serif;
+font: 14px/normal sans-serif;
 color: #333;
 white-space: nowrap;
 cursor: pointer;
@@ -65,4 +65,15 @@ background-image: linear-gradient(#F4F4F4, #ECECEC);
 -moz-border-radius: 0.2em;
 border-radius: 0.2em;
 zoom: 1;
+font-weight:bold;
+}
+.listen.icon::before {
+content: "";
+position: relative;
+top: 1px;
+float: right;
+width: 15px;
+height: 14px;
+background: url(../images/play.png) -1px -1px no-repeat;
+right: -7px;
 }

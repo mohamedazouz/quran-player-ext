@@ -229,6 +229,7 @@ select.chzn-select {
   padding: 7px 7px 8px;
   margin: 0;
   list-style: none;
+  direction: rtl;
 }
 .chzn-container .chzn-results .active-result {
   cursor: pointer;
