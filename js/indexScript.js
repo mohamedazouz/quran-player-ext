@@ -55,6 +55,7 @@ var IndexScript=function(){
             $("#choose_kare2").html(out);
         },
         playSora:function(soraid,qaraaid){
+            $("#player").html('<img src="images/loading.gif" width="" height="" alt="loading"/>');
             var soraNumber=soraid?soraid:$("#SoraName").val();
             var qaraaNumber=qaraaid?qaraaid:$("#qaraaName").val();
             if(soraNumber!=0 && qaraaNumber!=0){
