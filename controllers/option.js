@@ -40,8 +40,8 @@ PlayerOptoin={
                 out+="<td  width='250'>"+html+"</td>";
                 moqra2=response.item(i).moqra2;
                 out+="<td  width='250'>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
-                out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>delete</button></td>";
-                out+="<td>اعادة تشغيل <input type='checkbox' sid='"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>play</button></td>";
+                out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>حذف</button></td>";
+                out+="<td>اختار <input type='checkbox' sid='"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>تشغيل</button></td>";
                 out+="</tr>"
             }
             $("#preplayList").html(out);
@@ -101,9 +101,11 @@ $(function(){
 		
     })
     $("#deleteAllPlaylist").click(function(){
-        backgrounPage.PlayerDB.deleteALLPlayList(function(){
-            PlayerOptoin.showplaylist();
-        })
+        if(confirm("هل تريد مسح جميع القوائم ؟")){
+            backgrounPage.PlayerDB.deleteALLPlayList(function(){
+                PlayerOptoin.showplaylist();
+            })
+        }
     })
     $("#deleteSelectedPlaylist").click(function(){
         

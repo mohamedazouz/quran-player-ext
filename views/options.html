@@ -19,10 +19,11 @@ and open the template in the editor.
             <input type="text" id="playlistName" class="playlist"  placeholder="أسم قائمة التشغيل"/>
         
         <center><button  id="pauseButton" >  </button></center>
-        <div class="delete"><button id="deleteAllPlaylist">حذف الكل</button>
-        <button id="deleteSelectedPlaylist">حذف</button>
-        
-		</div>
+        <button id="save">أضافة</button>
+
+        <div id="error">
+            خطا
+        </div>
         <div id="">
             <table>
                 <thead>
@@ -50,13 +51,14 @@ and open the template in the editor.
                 <tbody id="preplayList">
                 </tbody>
             </table>
-			<button id="save">حفظ</button>
+            <div class="delete"><button id="deleteAllPlaylist">حذف الكل</button>
+        <button id="deleteSelectedPlaylist">حذف</button>
+
+		</div>
+			
         </div>
         
 
-        <div id="error">
-            خطا
-        </div>
         <script src="js/chosen.jquery.js" type="text/javascript"></script>
         <script>
             $(function(){
