@@ -40,8 +40,8 @@ PlayerOptoin={
                 out+="<td  width='250'>"+html+"</td>";
                 moqra2=response.item(i).moqra2;
                 out+="<td  width='250'>"+backgrounPage.quranQare2[moqra2-1].name+"</td>";
-                out+="<td><button onclick='PlayerOptoin.deletePlayList("+response.item(i).id+")'>حذف</button></td>";
-                out+="<td>اختار <input type='checkbox' sid='"+response.item(i).id+"'  /><button onclick='PlayerOptoin.playPlayList("+response.item(i).id+")'>تشغيل</button></td>";
+                out+="<td><button  id='"+response.item(i).id+"' class='deleteOp'>حذف</button></td>";
+                out+="<td>اختار <input type='checkbox' sid='"+response.item(i).id+"'  /><button class='playOp' id='"+response.item(i).id+"'>تشغيل</button></td>";
                 out+="</tr>"
             }
             $("#preplayList").html(out);
@@ -131,6 +131,14 @@ $(function(){
             backgrounPage.PlayerBG.pause();
             PlayerOptoin.setclass("play");
         }
-    })
+    });
+    $("tr:odd").addClass('odd');
     $(".chzn-select").chosen();
-})
+    $(".playOp").live("click",function(){
+        PlayerOptoin.playPlayList($(this).attr('id'));
+    });
+    $(".deleteOp").live("click",function(){
+        PlayerOptoin.deletePlayList($(this).attr('id'));
+    });
+    
+});

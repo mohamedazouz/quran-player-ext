@@ -17,55 +17,50 @@ and open the template in the editor.
             <div id="sora"> </div>
             <div id="moqra2"> </div>
             <input type="text" id="playlistName" class="playlist"  placeholder="أسم قائمة التشغيل"/>
-        
-        <center><button  id="pauseButton" >  </button></center>
-        <button id="save">أضافة</button>
 
-        <div id="error">
-            خطا
-        </div>
-        <div id="">
-            <table>
-                <thead>
-                    <tr class="odd">
-                        <th >
-                            الرقم
-                        </th>
-                        <th  width="250">
-                            الأسم
-                        </th>
-                        <th width="250">
-                            السور
-                        </th>
-                        <th width="250">
-                            القارىء
-                        </th>
-                        <th >
-                            حذف
-                        </th>
-                        <th width="200">
-                            تشغيل
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="preplayList">
-                </tbody>
-            </table>
-            <div class="delete"><button id="deleteAllPlaylist">حذف الكل</button>
-        <button id="deleteSelectedPlaylist">حذف</button>
+            <center><button  id="pauseButton" >  </button></center>
+            <button id="save">أضافة</button>
 
-		</div>
-			
-        </div>
-        
+            <div id="error">
+                خطا
+            </div>
+            <div id="">
+                <table>
+                    <thead>
+                        <tr class="odd">
+                            <th >
+                                الرقم
+                            </th>
+                            <th  width="250">
+                                الأسم
+                            </th>
+                            <th width="250">
+                                السور
+                            </th>
+                            <th width="250">
+                                القارىء
+                            </th>
+                            <th >
+                                حذف
+                            </th>
+                            <th width="200">
+                                تشغيل
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="preplayList">
+                    </tbody>
+                </table>
+                <div class="delete"><button id="deleteAllPlaylist">حذف الكل</button>
+                    <button id="deleteSelectedPlaylist">حذف</button>
 
-        <script src="js/chosen.jquery.js" type="text/javascript"></script>
-        <script>
-            $(function(){
-                $("tr:odd").addClass('odd');
-            });
-        </script>
-		<div class="clearfix"></div>
+                </div>
+
+            </div>
+
+
+            <script src="js/chosen.jquery.js" type="text/javascript"></script>
+            <div class="clearfix"></div>
         </div>
     </body>
 </html>
