@@ -41,7 +41,7 @@ PlayerBG={
     ononplaying:function(){
         var popup=chrome.extension.getViews({
             type:"popup"
-        })
+        });
         if(popup.length!=0){
             popup[0].popupPlayer.showwait();
         }
