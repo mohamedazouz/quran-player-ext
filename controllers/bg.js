@@ -49,6 +49,10 @@ PlayerBG={
 }
 $(function(){
     PlayerDB.setup();
+    document.getElementById("audio").addEventListener('playing',function(){
+        console.log("Asdasd");
+        PlayerBG.ononplaying();
+    })
     document.getElementById("audio").addEventListener('ended',function(){
         var soraNumber=0;
         var moqra2Obj=0;
