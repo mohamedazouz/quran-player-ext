@@ -1,0 +1,1 @@
+Google Chrome Extension which help people to listen The Holy Qur'an while they browsing Google chrome
